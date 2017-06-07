@@ -98,7 +98,7 @@ buttons_map = ["cowbell"] * 20
 
 # map the drum buttons to the drumset sounds
 buttons_map[1] = "ride_closed"
-buttons_map[2] = "ride_closed"
+buttons_map[2] = "tom_hi_hard"
 buttons_map[3] = "snare_hard"
 buttons_map[4] = "bass_hard"
 buttons_map[5] = "ride_closed"
@@ -137,7 +137,7 @@ not_combos = [2,3,4,5,6,7,8,10,12,15,16,17,20]
 
 # the foot pedal is easy to get unintended hits because it's often held down
 # ... at least that's a problem I have, I rest my foot on the pedal
-hold_watch = [1,3,4]
+hold_watch = [0,1,2,3,4]
 hold_watch_down = []
 
 # play the sound for the given button
