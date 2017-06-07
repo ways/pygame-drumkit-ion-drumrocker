@@ -19,6 +19,8 @@ http://sonic-pi.net/
 
 """
 
+verbose = False
+
 #
 # Define some colors
 BLACK    = (  0,   0,   0)
@@ -196,7 +198,7 @@ while done==False:
         button = joystick.get_button(i)
         textPrint.print(screen, "button {:>2} value: {}".format(i,button))
         if i not in [6,7] and button > 0 and event.type == pygame.JOYBUTTONDOWN:
-            print(i, ":", button)
+            if verbose: print(i, ":", button)
             # play_button_sound(i)
             if i not in hold_watch_down:
                 buttons_pressed.append(i)
@@ -214,8 +216,8 @@ while done==False:
     # ... etc...
     if len(buttons_pressed) == 1:
         # not a combo!
-        print("buttons pressed: ")
-        print(buttons_pressed)
+        if verbose: print("buttons pressed: ")
+        if verbose: print(buttons_pressed)
         play_button_number = buttons_pressed[0]
         play_button_sound(play_button_number)
         buttons_to_handle -= 1
@@ -287,7 +289,7 @@ while done==False:
 
         #todo: were any unhandled buttons left over?
         if buttons_to_handle > 0:
-            print("buttons_to_handle: {0}".format(buttons_to_handle))
+            if verbose: print("buttons_to_handle: {0}".format(buttons_to_handle))
 
     # update the screen
     pygame.display.flip()
