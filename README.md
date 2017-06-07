@@ -14,3 +14,11 @@ Note and thanks: this project uses a pygame grew out of playing with "joystick_c
 Also thanks: this script uses drum sounds from the awesome Sonic Pi project:
 
 - http://sonic-pi.net/
+
+Installation:
+
+* Debian/ubuntu:
+
+```bash
+  sudo apt install python3-pygame
+```
